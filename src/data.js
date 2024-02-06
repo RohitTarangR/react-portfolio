@@ -1,15 +1,15 @@
 //  icons
 import {
-  FiYoutube,
   FiInstagram,
   FiGithub,
-  FiDribbble,
   FiLayout,
   FiSettings,
   FiPenTool,
   FiTag,
   FiMail,
   FiMapPin,
+  FiFacebook,
+  FiLinkedin,
 } from 'react-icons/fi';
 
 // companies icons
@@ -20,22 +20,23 @@ import BehanceBrandIcon from './assets/img/brands/behance.png';
 import DribbbleBrandIcon from './assets/img/brands/dribbble.png';
 
 // projects images
-import Project1 from './assets/img/projects/p1.webp';
-import Project2 from './assets/img/projects/p2.webp';
-import Project3 from './assets/img/projects/p3.webp';
-import Project4 from './assets/img/projects/p4.webp';
-import Project5 from './assets/img/projects/p5.webp';
-import Project6 from './assets/img/projects/p6.webp';
+import Project1 from './assets/img/projects/p1_nike.png';
+import Project2 from './assets/img/projects/p2_shiv_cloth.png';
+import Project3 from './assets/img/projects/p3_textutils.png';
+import Project4 from './assets/img/projects/p3_todo_list.png';
+import Project5 from './assets/img/projects/p5_stopwatch.png';
+import Project6 from './assets/img/projects/p6_flipkart_clone.png';
+import Project7 from './assets/img/projects/p7_portfolio.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
 import SkillImg2 from './assets/img/skills/css3.png';
 import SkillImg3 from './assets/img/skills/js.png';
 import SkillImg4 from './assets/img/skills/reactjs.png';
-import SkillImg5 from './assets/img/skills/nextjs.png';
+import SkillImg5 from './assets/img/skills/pngwing.com.png';
 import SkillImg6 from './assets/img/skills/nodejs.png';
 import SkillImg7 from './assets/img/skills/git.png';
-import SkillImg8 from './assets/img/skills/figma.png';
+// import SkillImg8 from './assets/img/skills/figma.png';
 
 // testimonial images
 import TestiImage1 from './assets/img/testimonials/testimonial-1.webp';
@@ -60,10 +61,10 @@ export const navigation = [
     name: 'services',
     href: 'services',
   },
-  {
-    name: 'testimonials',
-    href: 'testimonials',
-  },
+  // {
+  //   name: 'testimonials',
+  //   href: 'testimonials',
+  // },
   {
     name: 'contact',
     href: 'contact',
@@ -73,20 +74,20 @@ export const navigation = [
 // social
 export const social = [
   {
-    icon: <FiYoutube />,
-    href: '',
+    icon: <FiFacebook />,
+    href: "https://www.facebook.com/profile.php?id=100074720104219",
   },
   {
     icon: <FiInstagram />,
-    href: '',
+    href: "https://www.instagram.com/rohitt.tarang/",
   },
   {
     icon: <FiGithub />,
-    href: '',
+    href: "https://github.com/RohitTarangR",
   },
   {
-    icon: <FiDribbble />,
-    href: '',
+    icon: <FiLinkedin />,
+    href: "https://www.linkedin.com/in/rohit-tarang-55153b242/",
   },
 ];
 
@@ -94,63 +95,69 @@ export const social = [
 export const brands = [
   {
     img: FreelancerBrandIcon,
-    href: '',
+    href: "https://www.freelancer.in/u/tarangrohit515",
   },
   {
     img: UpworkBrandIcon,
-    href: '',
+    href: "https://www.upwork.com/freelancers/~0175be1edbdead8e66",
   },
   {
     img: FiverBrandIcon,
-    href: '',
+    href: "https://www.fiverr.com/rohit_tarang?up_rollout=true",
   },
   {
     img: BehanceBrandIcon,
-    href: '',
+    href: "https://www.behance.net/tarangrohit1",
   },
   {
     img: DribbbleBrandIcon,
-    href: '',
+    href: "https://dribbble.com/rohittarang515?onboarding=true&designer=true",
   },
 ];
 
 // projects
 export const projectsData = [
   {
-    id: '1',
+    id: "1",
     image: Project1,
-    name: 'project name 1',
-    category: 'UI/UX design',
+    name: "Nike Clone Web-App",
+    category: "Web development",
   },
   {
-    id: '2',
+    id: "2",
     image: Project2,
-    name: 'project name 2',
-    category: 'web development',
+    name: "Shiv Cloth Web-app",
+    category: "Web development",
   },
   {
-    id: '3',
+    id: "3",
     image: Project3,
-    name: 'project name 3',
-    category: 'UI/UX design',
+    name: "TextUtils Web-App",
+    category: "UI/UX design",
   },
   {
-    id: '4',
+    id: "4",
     image: Project4,
-    name: 'project name 4',
-    category: 'branding',
+    name: "To-Do-List Web-App",
+    category: "UI/UX design",
   },
   {
-    id: '5',
+    id: "5",
     image: Project5,
-    name: 'project name 5',
-    category: 'web development',
+    name: "Stopwatch Web-App",
+    category: "UI/UX design",
   },
   {
-    id: '6',
+    id: "6",
     image: Project6,
-    name: 'project name 6',
-    category: 'web development',
+    name: "Flipkart Clone Web-App",
+    category: "Web development",
+  },
+  {
+    id: "7",
+    image: Project7,
+    name: "PErsonal Portfolio Website",
+    category: "Web development",
   },
 ];
 
@@ -164,10 +171,7 @@ export const projectsNav = [
   },
   {
     name: 'web development',
-  },
-  {
-    name: 'branding',
-  },
+  }
 ];
 
 // skill
@@ -193,36 +197,33 @@ export const skills = [
   {
     image: SkillImg7,
   },
-  {
-    image: SkillImg8,
-  },
 ];
 
 // services
 export const services = [
   {
     icon: <FiLayout />,
-    name: 'Web Design',
+    name: "Web Design",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "As a web designer, I combine creativity with technical expertise to transform concepts into stunning, user-friendly interfaces.",
   },
   {
     icon: <FiSettings />,
-    name: 'Web Development',
+    name: "Web Development",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Web development is the art and science of creating dynamic and interactive websites and web applications that serve various purposes and cater to diverse audiences.",
   },
   {
     icon: <FiPenTool />,
-    name: 'Branding',
+    name: "Branding",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Branding is more than just a logo or a tagline; it's the essence of your business identity. ",
   },
   {
     icon: <FiTag />,
-    name: 'SEO',
+    name: "SEO",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Search Engine Optimization (SEO) is the process of enhancing a website's visibility and ranking on search engine results pages (SERPs) to drive organic, targeted traffic.",
   },
 ];
 
@@ -257,12 +258,12 @@ export const contact = [
     icon: <FiMail />,
     title: 'Have a question?',
     subtitle: 'I am here to help you.',
-    description: 'Email me at hello@youremail.com',
+    description: 'Email me at rohittarang512005@gmail.com',
   },
   {
     icon: <FiMapPin />,
     title: 'Current Location',
-    subtitle: 'Bucharest, Romania',
+    subtitle: 'Gota, Ahmedabad - 382881',
     description: 'Serving clients worldwide',
   },
 ];

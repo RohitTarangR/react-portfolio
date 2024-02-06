@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 
-import Logo from "../assets/img/logo.svg"
 import Nav from './Nav'
 import NavMobile from './NavMobile'
 import Socials from './Socials'
+import { Link } from 'react-scroll'
 
 
 const Header = () => {
@@ -22,9 +22,9 @@ const Header = () => {
 
     <div className="container mx-auto flex items-center h-full justify-between">
       {/* logo */}
-      <a href="#">
-        <img src={Logo} alt="" />
-      </a>
+      <Link to='home' smooth={true} spy={true} className='font-medium cursor-pointer text-white hover:text-accent transition-all duration-300 text-2xl hover:scale-x-90'>
+        Rohit Tarang
+      </Link>
 
       {/* nav  */}
       <div className='hidden lg:block'>

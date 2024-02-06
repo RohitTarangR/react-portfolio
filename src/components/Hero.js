@@ -1,5 +1,6 @@
 import React from 'react'
-import WomenImg from "../assets/img/banner-woman2.webp"
+import Img from "../assets/img/Picsart_24-02-06_01-25-41-298.png"
+import  Resume  from "../assets/pdf/rt-resume-diff.pdf";
 
 const Hero = () => {
   return (
@@ -12,11 +13,12 @@ const Hero = () => {
           <div className="flex flex-1 flex-col items-center lg:items-start">
             <p className='text-lg text-accent mb-[22px]'>Hey, I'm Tarang👋</p>
             <h1 className='text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl lg:leading-[1.2] font-bold md:tracking-tight'>I Build & Design <br />Web Interfaces.</h1>
-            <p className='pt-4 pb-8 text-lg text-center max-w-[480px] md:pt-6 md:pb-12 lg:text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos.</p>
+            <a className='pt-4 pb-8 text-lg text-center max-w-[480px] md:pt-6 md:pb-12 lg:text-left underline underline-offset-4' href={Resume} download={true}>Click Here to download my Resume</a>
+
             <button className="btn btn-md bg-accent hover:bg-accent-hover transition-all duration-300 md:btn-lg">Work with me </button>
           </div>
-          <div className="hidden  lg:flex flex-1 justify-end items-end h-full">
-            <img src={WomenImg} alt="" />
+          <div className="hidden  lg:flex flex-1 justify-center items-center h-full">
+            <img src={Img} alt="" className='hover:scale-105 transition-all duration-300 hover:rotate-1' />
           </div>
         </div>
       </div>
