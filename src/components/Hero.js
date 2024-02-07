@@ -34,7 +34,7 @@ const Hero = () => {
             <img
               src={Img}
               alt=""
-              className="hover:scale-105 transition-all duration-300 hover:rotate-1 animate-pulse"
+              className="hover:scale-105 transition-all duration-300 hover:rotate-1 brightness-50 animate-pulse"
             />
           </div>
         </div>

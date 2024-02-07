@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { contact } from "../data";
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+
+  };
+  
   return (
     <>
       <section className="section bg-primary" id="contact">
@@ -42,36 +61,52 @@ const Contact = () => {
               })}
             </div>
 
-            <form className="space-y-8 w-full max-w-[780px]">
+            <form
+              className="space-y-8 w-full max-w-[780px]"
+              onSubmit={handleSubmit}
+            >
               <div className="flex gap-8">
                 <input
                   type="text"
                   className="input"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your name"
-                  required={true}
+                  required
                 />
                 <input
                   type="email"
                   className="input"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your email"
-                  required={true}
+                  required
                 />
               </div>
               <input
                 type="text"
                 className="input"
-                name=""
-                id=""
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 placeholder="Subject"
-                required={true}
+                required
               />
 
               <textarea
                 className="textarea"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Your message"
-                required={true}
+                required
               ></textarea>
-              <button className="btn btn-lg bg-accent hover:bg-accent-hover">
+              <button
+                type="submit"
+                className="btn btn-lg bg-accent hover:bg-accent-hover"
+              >
                 Send message
               </button>
             </form>

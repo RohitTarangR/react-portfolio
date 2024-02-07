@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTopBtn from './components/BackToTopBtn';
 
+
 // import components
 
 const App = () => {

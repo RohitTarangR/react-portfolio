@@ -9,7 +9,7 @@ const Nav = () => {
         {
           navigation.map((item,index)=>{
             return (
-              <li className="text-white hover:text-accent cursor-pointer font-semibold  transition-all duration-300">
+              <li className="text-white hover:text-accent cursor-pointer font-semibold  transition-all duration-300" key={index}>
                 <Link
                   to={item.href}
                   activeClass="active"
