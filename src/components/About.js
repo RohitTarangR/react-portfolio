@@ -8,7 +8,7 @@ const About = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-24">
           <img
-            className="h-full w-[566px] object-cover rounded-2xl md:mx-auto lg:mx-0"
+            className="h-full w-[566px] object-cover rounded-2xl md:mx-auto lg:mx-0 hover:brightness-50 brightness-75 transition-all duration-300"
             src={Image}
             alt=""
           /> 
