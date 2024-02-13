@@ -10,7 +10,6 @@ const Brands = () => {
                 return (
                     <div key={index}>
                         <a href={brands.href} target='_me'>
-
                         <img src={brands.img} alt="" />
                         </a>
                     </div>
