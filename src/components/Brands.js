@@ -9,7 +9,7 @@ const Brands = () => {
             {brands.map((brands,index)=>{
                 return (
                     <div key={index}>
-                        <a href={brands.href}>
+                        <a href={brands.href} target='_me'>
 
                         <img src={brands.img} alt="" />
                         </a>

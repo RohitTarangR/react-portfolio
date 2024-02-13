@@ -1,25 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "@formspree/react";
 import { contact } from "../data";
 
 const Contact = () => {
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+const [state, handleSubmit] = useForm("xkndrjvw");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-
-  };
+if (state.succeeded) {
+  return <p className="bg-secondary text-center text-white p-6 font-semibold text-xl">Thanks for Contact Me! </p>;
+}
   
   return (
     <>
@@ -70,38 +59,28 @@ const Contact = () => {
                   type="text"
                   className="input"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   placeholder="Your name"
-                  required
+
                 />
                 <input
                   type="email"
                   className="input"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   placeholder="Your email"
-                  required
+
                 />
               </div>
               <input
                 type="text"
                 className="input"
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
                 placeholder="Subject"
-                required
               />
 
               <textarea
                 className="textarea"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 placeholder="Your message"
-                required
               ></textarea>
               <button
                 type="submit"

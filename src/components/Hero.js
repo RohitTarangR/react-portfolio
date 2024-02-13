@@ -30,7 +30,7 @@ const Hero = () => {
               Download CV
             </a>
           </div>
-          <div className="hidden  lg:flex flex-1 justify-center items-center h-full">
+          <div className="hidden lg:flex flex-1 justify-center items-center h-full">
             <img
               src={Img}
               alt=""
