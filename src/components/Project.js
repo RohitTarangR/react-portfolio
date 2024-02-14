@@ -5,7 +5,7 @@ const Project = ({item}) => {
     <>
     <div key={item.id} className='flex flex-col items-center text-center'>
         <div className='mb-8'>
-          <a href={item.liveUrl}>
+          <a href={item.liveUrl} target='me'>
             <img className='rounded-2xl h-60 object-cover border border-gray-600 hover:brightness-75 transition-all duration-300' src={item.image} alt="" />
           </a>
             <p className='capitalize text-accent text-sm my-3 '>{item.category}</p>
